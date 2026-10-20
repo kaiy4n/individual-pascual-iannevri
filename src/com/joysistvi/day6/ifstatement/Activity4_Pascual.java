@@ -8,7 +8,7 @@ public class Activity4_Pascual {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter age: ");          // Prompt user to input age value
+        System.out.print("Enter age: ");          // Prompt user to input age value
         int age = scanner.nextInt();
 
         String category = "";                       // Initialize category as String
@@ -36,6 +36,7 @@ public class Activity4_Pascual {
             System.out.println("Please only enter number between 0 and 100");
         }
 
+        System.out.println();
         System.out.println("Age: " + age);              // Display age input
         System.out.println("Category: " + category);    // Display category
 
