@@ -36,6 +36,7 @@ public class Activity4_Pascual {
             System.out.println("Please only enter number between 0 and 100");
         }
 
+        System.out.println("Age: " + age);              // Display age input
         System.out.println("Category: " + category);    // Display category
 
     }
