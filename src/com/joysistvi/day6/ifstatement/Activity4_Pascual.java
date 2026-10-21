@@ -34,6 +34,7 @@ public class Activity4_Pascual {
         } else {                                    // Executes if input is not a value between 0 and 100
             System.out.println("Invalid Input.");                               // Invalid input message
             System.out.println("Please only enter number between 0 and 100");
+            return;
         }
 
         System.out.println();
