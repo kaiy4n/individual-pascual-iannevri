@@ -34,7 +34,7 @@ public class Activity8_Pascual {
 
         }
 
-        average = sum / numbers.length;                                     // Calculates for average of array inputs
+        average = (double) sum / numbers.length;                                     // Calculates for average of array inputs
 
         System.out.println();
         System.out.println("You entered: ");                                // For loop to display user inputs
