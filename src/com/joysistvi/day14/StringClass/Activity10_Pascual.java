@@ -9,6 +9,7 @@ public class Activity10_Pascual {
 
         Scanner scanner = new Scanner(System.in);
 
+        /*
         // RESEARCH PHASE
 
         // [1] contains()
@@ -39,12 +40,19 @@ public class Activity10_Pascual {
         System.out.println("Ends with 'dottir'?: " + icelandicName.endsWith("dottir"));       // Displays false
         System.out.println();
 
+         */
+
+
+
+
+
 
 
         // [3] startsWith()
         // - a method that checks whether a string starts with the specified character(s)
         // - returns 'true' if the string starts with the specified character and 'false' if not
         // - Syntax: startsWith(String prefix)
+        // Reference: https://www.w3schools.com/java/ref_string_startswith.asp
 
         System.out.println("[3] startsWith()");
         String countryName = "South Korea";
@@ -56,6 +64,19 @@ public class Activity10_Pascual {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
         // [4] indexOf()
         // - a method that returns the position of the first occurrence of specified character(s) in a string
         // - returns an int value, representing the index or -1 if it never occurs
@@ -95,7 +116,6 @@ public class Activity10_Pascual {
         System.out.println("Original Text: " + myStatement);
         System.out.println("Using replace(): " + myStatement.replace("Jollibee", "McDonald's"));
         System.out.println();
-
 
 
 
@@ -146,7 +166,9 @@ public class Activity10_Pascual {
         System.out.println("No. of Vowels: " + vowelCount);
         System.out.println("No. of consonants: " + consonantCount);
 
+         */
 
+        scanner.close();
     }
 
 }
