@@ -18,7 +18,7 @@ public class Activity11_Pascual {
         System.out.println(Math.max(-3.2, -1.1));
         System.out.println();
 
-        // Math.min() → minimum of two values
+        // Math.min() → minimum of two values—
         // - get the smallest value from different pairs of numbers.
         System.out.println("Math.min()");
         System.out.println(Math.min(78, 90));
@@ -112,7 +112,7 @@ public class Activity11_Pascual {
         System.out.println(Math.tan(3));
         System.out.println(Math.tan(-3));
         System.out.println();
-        
+
     }
 
 }
