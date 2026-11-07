@@ -11,17 +11,18 @@ public class UserAccount {
     private String email;
     private String password;
 
-    // Constructor method
+    // Parameterized Constructor
     public UserAccount(String firstName, String middleName,
                        String lastName, String address,
                        String email, String password) {
 
+        // Initialize fields using this keyword
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.address = address;
 
-        // Use setter methods to validate email and password
+        // Use setters to ensure email and password validation
         setEmail(email);
         setPassword(password);
     }
@@ -70,8 +71,8 @@ public class UserAccount {
     // Setter for Email with validation
     public void setEmail(String email) {
 
-        // Regular expression for basic email validation
-        String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
+        String emailRegex =
+                "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
 
         if (email.matches(emailRegex)) {
             this.email = email;
@@ -90,8 +91,7 @@ public class UserAccount {
     // Setter for Password with validation
     public void setPassword(String password) {
 
-        // Password must have at least 8 characters,
-        // one letter, and one number
+        // At least 8 characters, one letter, and one number
         if (password.length() >= 8
                 && password.matches(".*[A-Za-z].*")
                 && password.matches(".*[0-9].*")) {
@@ -105,5 +105,15 @@ public class UserAccount {
             );
         }
     }
-}
 
+    // Override toString() method
+    @Override
+    public String toString() {
+
+        return "\n--- User Account Created ---"
+                + "\nFull Name: " + firstName + " "
+                + middleName + " " + lastName
+                + "\nEmail: " + email
+                + "\nAddress: " + address;
+    }
+}

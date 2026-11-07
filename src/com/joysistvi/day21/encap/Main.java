@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    // Method for accepting non-empty inputs
+    // Method for inputs that should not be empty
     public static String getRequiredInput(Scanner scanner, String prompt) {
 
         String input;
@@ -15,7 +15,6 @@ public class Main {
             System.out.print(prompt);
             input = scanner.nextLine().trim();
 
-            // Check if input is empty
             if (!input.isEmpty()) {
                 return input;
             }
@@ -34,7 +33,7 @@ public class Main {
         System.out.println("*******************************************");
         System.out.println();
 
-        // Accept personal information
+        // Accept user information
         String firstName = getRequiredInput(scanner, "Enter First Name: ");
 
         String middleName = getRequiredInput(scanner, "Enter Middle Name: ");
@@ -51,18 +50,14 @@ public class Main {
             System.out.print("Enter Email: ");
             email = scanner.nextLine().trim();
 
-            // Basic email format validation
             String emailRegex =
                     "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
 
             if (email.matches(emailRegex)) {
-
                 break;
-
-            } else {
-
-                System.out.println("Invalid email format. Please try again.");
             }
+
+            System.out.println("Invalid email format. Please try again.");
         }
 
         // Password validation loop
@@ -73,26 +68,23 @@ public class Main {
             System.out.print("Enter Password: ");
             password = scanner.nextLine();
 
-            // Check password requirements
             if (password.length() >= 8
                     && password.matches(".*[A-Za-z].*")
                     && password.matches(".*[0-9].*")) {
 
                 break;
-
-            } else {
-
-                System.out.println("Invalid password!");
-                System.out.println("Password must contain:");
-                System.out.println("- At least 8 characters");
-                System.out.println("- At least one letter");
-                System.out.println("- At least one number");
-                System.out.println("Please try again.");
             }
+
+            System.out.println("Invalid password!");
+            System.out.println("Password must contain:");
+            System.out.println("- At least 8 characters");
+            System.out.println("- At least one letter");
+            System.out.println("- At least one number");
+            System.out.println("Please try again.");
         }
 
         // Create UserAccount object using the constructor
-        UserAccount user = new UserAccount(
+        UserAccount account = new UserAccount(
                 firstName,
                 middleName,
                 lastName,
@@ -101,20 +93,11 @@ public class Main {
                 password
         );
 
-        // Display registered account information
-        System.out.println();
-        System.out.println("--- User Account Created ---");
-
-        // Retrieve information using getter methods
-        System.out.println("Full Name: "
-                + user.getFirstName() + " "
-                + user.getMiddleName() + " "
-                + user.getLastName());
-
-        System.out.println("Address: " + user.getAddress());
-        System.out.println("Email: " + user.getEmail());
+        // Display account information using toString()
+        System.out.println(account);
 
         // Close Scanner
         scanner.close();
     }
 }
+
